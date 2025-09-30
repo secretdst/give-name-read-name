@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhập tên</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    h2 { font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Nhập tên của bạn:</h2>
+  <input type="text" id="username" placeholder="Nhập tên tại đây">
+  <button onclick="hienThiTen()">Gửi</button>
+  <p id="ketQua"></p>
+
+  <script>
+    function hienThiTen() {
+      var ten = document.getElementById("username").value;
+      var ketQua = document.getElementById("ketQua");
+      if (ten.trim() === "") {
+        ketQua.textContent = "Vui lòng nhập tên!";
+      } else {
+        ketQua.textContent = "Tên của bạn là: " + ten;
+      }
+    }
+  </script>
+</body>
+</html>
